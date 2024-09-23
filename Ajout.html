@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Document</title>
+</head>
+<body>
+    <h1>Ajouter un Document</h1>
+    <form action="Ajout.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Titre" required>
+        <input type="text" name="mots_cles" placeholder="Mots clés" required>
+        <input type="file" name="monfichier" required>
+        <button type="submit">Uploader</button>
+    </form>
+</body>
+</html>
