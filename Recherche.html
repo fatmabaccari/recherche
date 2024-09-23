@@ -1,0 +1,31 @@
+<!-- formulaire_insertion_documents.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout d'un document</title>
+    <link rel="stylesheet" type="text/css" href="./Style.css" />
+</head>
+<body>
+    <div class="cadre">
+    <h1><u>Recherche basée sur les mots clés</u></h1>
+    <br><br>
+    <form action="recher.php" method="p" id="documentForm">
+      
+      <h3>  Mots clés : <input type="text" required name="mots_cles" placeholder=" mot clé de votre document"></h4><br><br>
+      <button type="submit" class="btn"><h2>Envoyer</h2></button>
+
+        <button type="button" class="btn" onclick="effacerFormulaire()"><h2>Effacer</h2></button>
+    </form>
+    </div>
+
+    <script>
+        function effacerFormulaire() {
+            document.getElementById("documentForm").reset(); // Réinitialise le formulaire
+        }
+    </script>
+</body>
+    
+    </form> 
+</body>
+</html>
