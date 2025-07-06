@@ -18,8 +18,13 @@ Ce projet PHP permet de gérer des documents via un système simple d’upload, 
 
 1. Installer un serveur web local (ex. EasyPHP, XAMPP, WAMP) avec PHP et MySQL.
 
-2. Créer la base de données `test` :
+
+2. Créer une base MySQL `test` avec la table `documen` :
 
 ```sql
-CREATE DATABASE test;
-USE test;
+CREATE TABLE documen (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  doc_title VARCHAR(255) NOT NULL,
+  doc_path VARCHAR(255) NOT NULL,
+  doc_keywords VARCHAR(255) NOT NULL
+);
