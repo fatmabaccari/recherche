@@ -1,28 +1,25 @@
-# Projet d'Indexation de Documents
+# Projet d’Indexation et de Recherche de Documents
 
-Ce projet permet d'uploader des fichiers (PDF, TXT, DOC, DOCX) via un formulaire web, de les enregistrer sur le serveur, puis de stocker les informations associées (titre, chemin, mots-clés) dans une base de données MySQL.
+Ce projet PHP permet de gérer des documents via un système simple d’upload, d’indexation et de recherche par mots-clés. Les fichiers uploadés sont stockés sur le serveur et leurs métadonnées (titre, chemin, mots-clés) sont enregistrées dans une base de données MySQL. Ensuite, une interface de recherche permet de retrouver les documents indexés en fonction des mots-clés saisis.
 
 ---
 
 ## Fonctionnalités
 
-- Upload de fichiers autorisés (pdf, txt, doc, docx) jusqu'à 1 Mo
-- Stockage du fichier sur le serveur dans un dossier défini
-- Enregistrement dans la base MySQL des métadonnées du document : titre, chemin, mots-clés
-- Gestion des erreurs : fichier trop volumineux, extension non autorisée, échec de déplacement ou d'insertion en base
-
+- **Upload de documents** (PDF, TXT, DOC, DOCX) jusqu’à 1 Mo
+- Stockage des fichiers dans un dossier serveur dédié
+- Enregistrement des métadonnées : titre, chemin, mots-clés dans la base MySQL
+- Recherche par mots-clés dans la base, avec affichage des documents correspondants
+- Gestion des erreurs (taille de fichier, extensions autorisées, erreurs de déplacement, erreurs SQL)
+  
 ---
 
 ## Installation et Configuration
 
-1. Installer un serveur web local (ex : EasyPHP, XAMPP, WAMP)
-2. Créer une base de données MySQL nommée `test`
-3. Créer la table `documen` avec la structure suivante :
+1. Installer un serveur web local (ex. EasyPHP, XAMPP, WAMP) avec PHP et MySQL.
+
+2. Créer la base de données `test` :
 
 ```sql
-CREATE TABLE documen (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  doc_title VARCHAR(255) NOT NULL,
-  doc_path VARCHAR(255) NOT NULL,
-  doc_keywords VARCHAR(255) NOT NULL
-);
+CREATE DATABASE test;
+USE test;
